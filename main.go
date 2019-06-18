@@ -33,7 +33,7 @@ func main() {
 	log.Printf("Starting Cert-Stub Server...\n\n")
 
 	port := flag.String("port", "8080", "The port to listen on")
-	expirationInMinutes := flag.Int("expirationInMinutes", 1, "The expiration duration for all certificates")
+	expirationInMinutes := flag.Int("expirationInMinutes", 10, "The expiration duration for all certificates")
 	flag.Parse()
 
 	capi := api.NewCertifierAPI(*port, *expirationInMinutes)
